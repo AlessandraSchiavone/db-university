@@ -1,0 +1,6 @@
+1)SELECT COUNT(`id`) AS 'Numero_iscritti', YEAR(`enrolment_date`) AS 'Anno' 
+FROM `students` 
+GROUP BY YEAR(`enrolment_date`);
+2)SELECT COUNT(`id`) AS 'edifici_comuni', `office_address` FROM `teachers` GROUP BY `office_address`;
+3)SELECT `exam_id`, AVG(`vote`) AS 'media' FROM `exam_student` GROUP BY (`exam_id`);
+4)SELECT COUNT(`departments`.`id`) AS 'numero_corsi', `departments`.`name` FROM `departments` INNER JOIN `degrees` ON `departments`.`id` = `degrees`.`department_id` GROUP BY (`departments`.`id`)
